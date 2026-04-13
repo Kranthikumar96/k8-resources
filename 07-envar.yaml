@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: envar-demo
+  lables:
+    project: roboshop
+    component: nginx
+    tier: frontend
+    environment: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+    - name: COURSE
+      value: "DevOp"
+    - name: TOPIC
+      value: "KUBERENETES"
+    - name: TRAINER
+      value: "SIVA KUMAR REDDY"
+    - name: STUDENT
+      value: "KRANTHI KUMAR"
