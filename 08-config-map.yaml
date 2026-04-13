@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pod_config
+  lables:
+    purpose: configmap-demo
+    env: dev
+data:
+  COURSE: "DevOps with AWS"
+  TOPIC: "KUBERENETES"
+  TRAINER: "Siva Kumar Reddy"
+  STUDENT: "Kranthi Kumar B"
