@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: annotations
+  lables:
+    project: roboshop
+    purpose: annotations-demo
+    component: nginx
+    tier: frontend
+    environment: dev
+  annotations:
+    description: "This pod is created to demonistration the annotations in gthe pod"
+    jenkins: "https://jenkins.com/build/job/roboshop-catalogue/3"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
