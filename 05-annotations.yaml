@@ -9,7 +9,7 @@ metadata:
     tier: frontend
     environment: dev
   annotations:
-    description: "This pod is created to demonistration the annotations in gthe pod"
+    description: "This pod is created to demonistration the annotations in the pod"
     jenkins: "https://jenkins.com/build/job/roboshop-catalogue/3"
 spec:
   containers:
