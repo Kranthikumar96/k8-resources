@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: pod_config
-  lables:
+  labels:
     purpose: configmap-demo
     env: dev
 data:
