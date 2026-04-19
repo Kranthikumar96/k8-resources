@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nginx-np-service
   labels:
-    purpose:  service-np-demo
+    purpose: service-np-demo
 spec:
   type: NodePort
   selector:
@@ -15,7 +15,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80  # service port
-      targetport: 80  # container port
+      targetPort: 80  # container port
 ---
 apiVersion: v1
 kind: Pod
