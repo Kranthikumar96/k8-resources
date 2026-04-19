@@ -10,7 +10,7 @@ metadata:
     tier: fromtend
     component: nginx
 spec:
-  replica: 3
+  replicas: 3
   # These are the labels replica set use to create pod replicas, this should match pod labels
   selector:
     matchLabels:
