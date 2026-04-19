@@ -14,7 +14,7 @@ spec:
     component: nginx
   ports:
     - protocol: TCP
-      port  : 80  # service port
+      port: 80  # service port
       targetport: 80  # container port
 ---
 apiVersion: v1
