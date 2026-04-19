@@ -12,9 +12,9 @@ spec:
     tier: frontend
     component: dev
   ports:
-    protocol: TCP
-    port: 80 # service port
-    targetPort: 80 # container port
+    - protocol: TCP
+      port: 80 # service port
+      targetPort: 80 # container port
 ---
 apiVersion: v1
 kind: Pod
@@ -28,5 +28,5 @@ metadata:
     component: dev
 spec:
   containers:
-  - name: nginx
-    image: nginx
+    - name: nginx
+      image: nginx
