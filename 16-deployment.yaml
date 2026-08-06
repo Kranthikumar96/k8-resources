@@ -45,6 +45,7 @@ spec:
     project: roboshop
     environment: dev
     tier: frontend
+    component: nginx 
   ports:
     - protocol: TCP
       port: 80 # service port
