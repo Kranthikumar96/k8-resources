@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: efs-static
+spec:
+  capacity:
+    storage: 5Gi # storage size of the volume is dummy it will be ignored by EFS driver, EFS is elastic storage
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: "" # it shoulb be empty in static provisioning
+  persistentVolumeReclaimPolicy: Retain
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: efs:fs-e8a95a42
+---
