@@ -7,7 +7,7 @@ metadata:
     purpose: deployment-demo
     project: roboshop
     environment: dev
-    tier: fromtend
+    tier: frontend
     component: nginx
 spec:
   replicas: 3
@@ -17,7 +17,7 @@ spec:
       purpose: deployment-demo
       project: roboshop
       environment: dev
-      tier: fromtend
+      tier: frontend
       component: nginx
   # This is pod definition
   template:
@@ -26,9 +26,26 @@ spec:
         purpose: deployment-demo
         project: roboshop
         environment: dev
-        tier: fromtend
+        tier: frontend
         component: nginx
     spec:
       containers:
         - name: nginx
           image: nginx:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+  labels:
+    purpose: service-demo
+spec:
+  selector:
+    purpose: deployment-demo
+    project: roboshop
+    environment: dev
+    tier: frontend
+  ports:
+    - protocol: TCP
+      port: 80 # service port
+      targetPort: 80 # container port
