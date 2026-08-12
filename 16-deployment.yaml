@@ -38,8 +38,9 @@ kind: Service
 metadata:
   name: nginx-svc
   labels:
-    purpose: service-demo
+    purpose: deployment-demo
 spec:
+  type: LoadBalancer
   selector:
     purpose: deployment-demo
     project: roboshop
